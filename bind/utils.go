@@ -213,11 +213,13 @@ else:
 	cfg.LdFlags = strings.Join([]string{
 		`"-L` + raw.LibDir + `"`,
 		`"-l` + raw.LibPy + `"`,
-		"-extldflags='-lresolv'",
 		raw.ShLibs,
 		raw.SysLibs,
 	}, " ")
-	cfg.LdDynamicFlags = raw.ShFlags
+	cfg.LdDynamicFlags = strings.Join([]string{
+		"-extldflags='-lresolv'",
+		raw.ShFlags,
+	}, " ")
 
 	return cfg, nil
 }
