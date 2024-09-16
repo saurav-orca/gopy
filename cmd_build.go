@@ -190,7 +190,7 @@ func runBuild(mode bind.BuildMode, cfg *BuildCfg) error {
 			// reducing the final size of the binary. From https://golang.org/cmd/link/
 			// -s Omit the symbol table and debug information
 			// -w Omit the DWARF symbol table
-			args = append(args, "-ldflags=-s -w -extldflags='-lresolv'")
+			args = append(args, "-ldflags='-s -w -extldflags=\"-lresolv\"'")
 		}
 		args = append(args, "-o", buildLib, ".")
 		fmt.Printf("go %v\n", strings.Join(args, " "))
