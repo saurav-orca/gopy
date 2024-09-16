@@ -15,7 +15,7 @@ import (
 	"github.com/gonuts/flag"
 	"github.com/pkg/errors"
 
-	"github.com/go-python/gopy/bind"
+	"github.com/saurav-orca/gopy/bind"
 )
 
 // BuildCfg contains command options and binding generation options

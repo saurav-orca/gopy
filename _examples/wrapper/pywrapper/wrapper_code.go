@@ -7,7 +7,7 @@ package pywrapper
 import (
 	"fmt"
 
-	"github.com/go-python/gopy/_examples/wrapper"
+	"github.com/saurav-orca/gopy/_examples/wrapper"
 )
 
 type WrapperStruct struct {

@@ -1,4 +1,4 @@
-module github.com/go-python/gopy
+module github.com/saurav-orca/gopy
 
 go 1.19
 
