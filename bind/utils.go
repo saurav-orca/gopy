@@ -216,10 +216,7 @@ else:
 		raw.ShLibs,
 		raw.SysLibs,
 	}, " ")
-	cfg.LdDynamicFlags = strings.Join([]string{
-		"-extldflags='-lresolv'",
-		raw.ShFlags,
-	}, " ")
+	cfg.LdDynamicFlags = raw.ShFlags
 
 	return cfg, nil
 }
