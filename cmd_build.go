@@ -181,7 +181,7 @@ func runBuild(mode bind.BuildMode, cfg *BuildCfg) error {
 
 		// build the go shared library upfront to generate the header
 		// needed by our generated cpython code
-		args := []string{"build -x", "-mod=mod", "-buildmode=c-shared"}
+		args := []string{"build", "-x", "-mod=mod", "-buildmode=c-shared"}
 		if cfg.BuildTags != "" {
 			args = append(args, "-tags", cfg.BuildTags)
 		}
